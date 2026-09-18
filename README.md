@@ -4,6 +4,12 @@
   <h3>🚀 Full-Stack Developer | React • Next.js • Node.js • Python • 360° Virtual Tour (krpano)</h3>
 
   <p align="center">
+    <a href="https://Ducthinh015.github.io/portfolio" target="_blank">
+      <img src="https://img.shields.io/badge/🌐_3D_PORTFOLIO_LIVE-Visit_My_3D_Web-00f2fe?style=for-the-badge&logo=react&logoColor=black" alt="3D Web Portfolio" />
+    </a>
+  </p>
+
+  <p align="center">
     <a href="mailto:thinh0408205@gmail.com">
       <img src="https://img.shields.io/badge/Email-thinh0408205%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
     </a>
@@ -20,6 +26,13 @@
   </p>
 
 </div>
+
+---
+
+### 🌐 3D Interactive Portfolio Website
+
+> **✨ Trải nghiệm 3D Portfolio tương tác trực tiếp tại**: [**https://Ducthinh015.github.io/portfolio**](https://Ducthinh015.github.io/portfolio)  
+> *Website bao gồm trải nghiệm không gian 3D Three.js, trình mô phỏng 360° Virtual Tour (krpano), timeline kinh nghiệm thực chiến và lưới kỹ năng chuyên môn.*
 
 ---
 
@@ -75,11 +88,11 @@
 
 ---
 
-### 📫 Liên Hệ (Get in Touch)
+### 📫 Liên Hệ & Portfolio Link
 
+- 🌐 **3D Portfolio**: [https://Ducthinh015.github.io/portfolio](https://Ducthinh015.github.io/portfolio)
 - ✉️ **Email**: [thinh0408205@gmail.com](mailto:thinh0408205@gmail.com)
 - 📞 **Điện thoại**: [0905175313](tel:0905175313)
-- 🌐 **GitHub**: [github.com/Ducthinh015](https://github.com/Ducthinh015)
 - 🎓 **Học vấn**: Công nghệ Thông tin - Học viện Hàng không Việt Nam
 
 ---
