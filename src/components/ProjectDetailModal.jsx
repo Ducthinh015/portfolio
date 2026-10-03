@@ -4,6 +4,7 @@ import {
   ShoppingCart, Star, ShieldCheck, Zap, Server, Cpu, 
   Database, Layers, Eye, FileText, Sparkles, Check, ChevronRight
 } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export default function ProjectDetailModal({ project, onClose, onOpenGallery }) {
   if (!project) return null;
@@ -80,7 +81,7 @@ export default function ProjectDetailModal({ project, onClose, onOpenGallery }) 
             {/* Main Image Stage */}
             <div className="relative h-[340px] sm:h-[420px] w-full rounded-2xl border border-slate-800 bg-slate-950 overflow-hidden shadow-2xl group">
               <img
-                src={currentMainImage.url || project.anhCover}
+                src={getAssetUrl(currentMainImage.url || project.anhCover)}
                 alt={currentMainImage.caption || project.ten}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -125,7 +126,7 @@ export default function ProjectDetailModal({ project, onClose, onOpenGallery }) 
                         : 'border-slate-800 opacity-60 hover:opacity-100 hover:border-slate-600'
                     }`}
                   >
-                    <img src={img.url} alt="" className="w-full h-full object-cover" />
+                    <img src={getAssetUrl(img.url)} alt="" className="w-full h-full object-cover" />
                   </button>
                 ))}
               </div>

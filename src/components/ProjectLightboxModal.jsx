@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, Image as ImageIcon } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export default function ProjectLightboxModal({ project, initialIndex = 0, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
@@ -47,7 +48,7 @@ export default function ProjectLightboxModal({ project, initialIndex = 0, onClos
         </button>
 
         <div className="flex max-h-[75vh] max-w-6xl flex-col items-center p-3 sm:p-6">
-          <img src={currentImg.url} alt={currentImg.caption || 'Ảnh dự án'} className="max-h-[64vh] w-auto rounded-2xl border border-white/10 object-contain shadow-[0_35px_120px_rgba(0,0,0,0.7)]" />
+          <img src={getAssetUrl(currentImg.url)} alt={currentImg.caption || 'Ảnh dự án'} className="max-h-[64vh] w-auto rounded-2xl border border-white/10 object-contain shadow-[0_35px_120px_rgba(0,0,0,0.7)]" />
           {currentImg.caption && (
             <p className="mt-4 max-w-3xl rounded-2xl border border-white/10 bg-slate-950/78 px-4 py-2 text-center text-xs sm:text-sm font-mono text-cyan-100 backdrop-blur-xl">
               {currentImg.caption}
@@ -59,7 +60,7 @@ export default function ProjectLightboxModal({ project, initialIndex = 0, onClos
       <div className="relative z-10 flex justify-center gap-3 overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.03] p-3">
         {project.galleryImages.map((img, idx) => (
           <button key={idx} onClick={() => setCurrentIndex(idx)} className={`relative h-14 w-20 flex-shrink-0 overflow-hidden rounded-xl border-2 transition-all ${idx === currentIndex ? 'border-cyan-300 scale-105 shadow-[0_0_26px_rgba(34,211,238,0.35)]' : 'border-white/10 opacity-55 hover:opacity-100'}`}>
-            <img src={img.url} alt="" className="h-full w-full object-cover" />
+            <img src={getAssetUrl(img.url)} alt="" className="h-full w-full object-cover" />
           </button>
         ))}
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, Box, Cuboid, Folder, Mail, Send } from 'lucide-react';
 import BackendCityCanvas from './BackendCityCanvas';
+import { getAssetUrl } from '../utils/assetHelper';
 
 const heroCards = [
   {
@@ -49,7 +50,7 @@ export default function HeroSection({ isXray }) {
         </div>
 
         <h1 className="hero-name">
-          NGUYỄN ĐỨC<br /> THỊNH
+          NGUYỄN ĐỨC<br />    THỊNH
         </h1>
         <div className="hero-role">BACKEND ENGINEER</div>
 

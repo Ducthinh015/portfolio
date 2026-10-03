@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { XRAY_NODES } from '../data/mockData';
 import { Network, ShieldCheck, Zap, Boxes, Workflow, Cpu, Database, Radio, Activity } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetHelper';
 
 const ICON_MAP = { Network, ShieldCheck, Zap, Boxes, Workflow, Cpu, Database, Radio, Activity };
 
@@ -137,12 +138,12 @@ export default function BackendCityCanvas({ isXray }) {
     <div className="backend-city-scene">
       {/* Normal City Base Layer */}
       <div className={`city-layer city-layer-normal ${isXray ? 'is-xray-active' : ''}`}>
-        <img src="/assets/backend_city_premium_normal.png" alt="Backend City Normal Mode" />
+        <img src={getAssetUrl('/assets/backend_city_premium_normal.png')} alt="Backend City Normal Mode" />
       </div>
 
       {/* X-Ray City Overlay Layer */}
       <div className={`city-layer city-layer-xray ${isXray ? 'is-active' : ''}`}>
-        <img src="/assets/backend_city_premium_xray.png" alt="Backend City X-Ray Mode" />
+        <img src={getAssetUrl('/assets/backend_city_premium_xray.png')} alt="Backend City X-Ray Mode" />
       </div>
 
       {/* Left Blend Overlay Gradient for text readability */}

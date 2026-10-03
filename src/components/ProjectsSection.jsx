@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Github, Image as ImageIcon, Info, Server, ShoppingBag, Layers3 } from 'lucide-react';
 import ProjectLightboxModal from './ProjectLightboxModal';
 import ProjectDetailModal from './ProjectDetailModal';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export default function ProjectsSection({ projects, onModalToggle }) {
   const [lightboxProject, setLightboxProject] = useState(null);
@@ -61,7 +62,7 @@ export default function ProjectsSection({ projects, onModalToggle }) {
             </div>
 
             <button onClick={() => handleOpenLightbox(project)} className="relative block h-64 w-full overflow-hidden bg-slate-950 text-left">
-              <img src={project.anhCover || '/assets/ecommerce_backend.jpg'} alt={project.ten} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+              <img src={getAssetUrl(project.anhCover || '/assets/ecommerce_backend.jpg')} alt={project.ten} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 transition duration-500 group-hover:opacity-100">
                 <span className="inline-flex items-center gap-2 rounded-2xl border border-cyan-300/40 bg-slate-950/78 px-4 py-2 text-xs font-bold font-mono text-cyan-100 shadow-[0_0_40px_rgba(34,211,238,0.20)] backdrop-blur-xl">
