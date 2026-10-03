@@ -76,4 +76,4 @@ Sau đó mở trình duyệt truy cập đường dẫn local hiển thị trên
 
 ---
 
-Chúc anh **Nguyễn Đức Thịnh** ứng tuyển thành công và có buổi phỏng vấn ấn tượng! 🚀
+Chúc anh **Đức Thịnh** ứng tuyển thành công và có buổi phỏng vấn ấn tượng! 🚀

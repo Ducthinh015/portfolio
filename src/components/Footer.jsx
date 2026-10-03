@@ -1,58 +1,38 @@
 import React from 'react';
-import { ArrowUp, Terminal } from 'lucide-react';
+import { Terminal, Github, Heart } from 'lucide-react';
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <footer style={{ borderTop: '1px solid var(--border-glass)', padding: '40px 0', background: '#05070b' }}>
-      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '20px' }}>
+    <footer className="w-full bg-slate-950 border-t border-slate-800/80 py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
         
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div
-            style={{
-              width: '32px',
-              height: '32px',
-              borderRadius: '8px',
-              background: 'linear-gradient(135deg, #00f2fe, #4facfe)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#07090e',
-              fontWeight: 'bold'
-            }}
-          >
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-lg bg-cyan-500 flex items-center justify-center text-slate-950 font-bold">
             <Terminal size={18} />
           </div>
-          <span style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>
-            © {new Date().getFullYear()} <b>Nguyễn Đức Thịnh</b> — All Rights Reserved.
-          </span>
+          <div>
+            <span className="font-display font-bold text-sm text-slate-200 block">NGUYỄN ĐỨC THỊNH</span>
+            <span className="font-mono text-[11px] text-cyan-400">Backend City & System Architecture</span>
+          </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
-          <span style={{ fontSize: '0.85rem', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
-            Built with React • Three.js • GitHub Pages
-          </span>
-          <button
-            onClick={scrollToTop}
-            style={{
-              background: 'rgba(255, 255, 255, 0.05)',
-              border: '1px solid var(--border-glass)',
-              color: 'var(--accent-cyan)',
-              padding: '10px',
-              borderRadius: '10px',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              transition: 'all 0.2s ease'
-            }}
-            title="Lên đầu trang"
+        <div className="flex flex-wrap justify-center gap-6 font-mono text-xs text-slate-400">
+          <span>Hệ thống: <strong className="text-emerald-400">Đã sẵn sàng</strong></span>
+          <span>Kiến trúc: <strong className="text-cyan-400">Microservices & Cache</strong></span>
+          <span>AI: <strong className="text-purple-400">Codebase Intelligence</strong></span>
+        </div>
+
+        <div className="flex items-center gap-4 text-xs font-mono text-slate-500">
+          <a
+            href="https://github.com/Ducthinh015"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 hover:text-cyan-400 transition-colors"
           >
-            <ArrowUp size={18} />
-          </button>
+            <Github size={14} />
+            <span>GitHub Profile</span>
+          </a>
+          <span>© 2026</span>
         </div>
 
       </div>
